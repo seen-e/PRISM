@@ -1,6 +1,7 @@
 """Validate local assets and anchor references without third-party packages."""
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,10 +24,14 @@ class Page(HTMLParser):
         for name in ("src", "href", "poster", "data-image"):
             if attrs.get(name):
                 self.references.append(attrs[name])
+        for name in ("data-play", "data-expand"):
+            if attrs.get(name):
+                self.references.append("#" + attrs[name])
 
 
 page = Page()
 page.feed((ROOT / "index.html").read_text(encoding="utf-8"))
+page.references.extend(re.findall(r"url\(['\"]?([^)'\"]+)", (ROOT / "styles.css").read_text(encoding="utf-8")))
 assets = set()
 for value in page.references:
     url = urlsplit(value)
