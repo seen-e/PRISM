@@ -14,15 +14,19 @@ The paper has not been uploaded to arXiv. The page labels it as a **research man
 - `assets/paper/PRISM.pdf`: 21-page PDF compiled from the supplied `PRISM_arXiv_preprint_20261008.zip` without changing its LaTeX source.
 - `assets/paper/prism.bib`: citation for the current unpublished manuscript.
 - `assets/video/prism-demo.mp4`: approved 180-second, 1080p/30fps demonstration; original exported file copied without re-encoding (76,060,560 bytes).
-- `assets/video/pps-teleoperation.mp4`: the complete 22.5-second PPS panel from the approved demonstration, labeled Human VR Teleoperation, with original overlays and 2× timing preserved.
-- `assets/video/*.mp4`: 10 additional standalone experiment clips, grouped into main tasks, alignment, and perturbations. Every experimental frame from the approved full film is retained across the 11 clips; only its opening and closing title cards are excluded.
-- `assets/clips.json`: precise frame boundaries, durations, titles, and media paths.
+- `assets/video/source/*.mp4`: 1× videos rebuilt directly from the supplied original recordings at their native resolutions and frame rates; no 3-minute-film slices are used by the page.
+- `assets/source-clips.json`: original filenames, frame ranges, native dimensions, and 1× durations.
+- `assets/video/source/pps-teleoperation.mp4`: 45-second 1× PPS composition; three unscaled 960×624 panels retain their original score overlays and motion synchronization. Shorter sources hold their last frame.
+- `assets/video/source/pps-{drive-insertion,bimanual-mating,screw-tightening}.mp4`: untouched PPS original files.
+- `assets/clips.json` and the old top-level MP4s: archived previous website media; no longer referenced by the homepage.
 - `assets/images/logo.webp`: the supplied PRISM logo, used in the title, navigation, footer, and browser favicon.
 - `assets/fonts/`: locally hosted Manrope fonts and their SIL Open Font License.
 - `assets/chapters.vtt`: chapters matching the final demonstration.
 - `tools/preview.py`: local preview server with video byte-range support.
 - `tools/check_site.py`: local file and anchor validation.
-- `tools/split_videos.py`: reproducible frame-accurate video splitting with FFmpeg.
+- `tools/build_source_videos.py` and `tools/source_videos.json`: reproducible native-resolution H.264 conversion, without speed changes or resampling.
+- `tools/build_pps_source.py`: full-resolution 1× PPS composition.
+- `tools/split_videos.py`: archived previous 3-minute-film splitting workflow.
 
 There are no external JavaScript, CSS, font, analytics, or build dependencies. Videos load when requested rather than downloading during initial page load. All site paths are relative and work under `/PRISM/`.
 
@@ -42,7 +46,7 @@ Upload these files to the `main` branch of `detimage123/PRISM`, keeping `index.h
 
 In **Settings → Pages**, select **Deploy from a branch**, then **main / (root)**. GitHub serves the site at https://detimage123.github.io/PRISM/ after deployment finishes.
 
-The MP4 is below GitHub's 100 MiB per-file limit and is stored directly, not through Git LFS. Keep future video replacements below this limit, update chapter timestamps when editing the video, and preserve embedded speed and teleoperation labels.
+Current media uses browser-compatible H.264 with fast-start MP4 layout. A 1× label means the timing of the supplied original file; no additional speed-up or slow-down is applied. Audio is omitted, and the previously identified network label is masked in the local-alignment video. Full recordings are retained; the 84-second perturbation recording is split at 30 seconds into two consecutive videos without omitting frames. The original three-minute submission film remains archived, unchanged.
 
 ## Editing
 
@@ -60,3 +64,5 @@ node --check app.js
 ```
 
 Check desktop and mobile layouts, each video, enlarged playback, figure enlargement, citation copying, and the paper download after replacing any assets.
+
+Native-resolution MP4s above GitHub's per-file repository limit are hosted in the same repository's `website-media-20261008` release, with `video/mp4` content type. The homepage links those assets directly. Local copies are preserved under `assets/video/source/` and excluded from Git; `assets/source-clips.json` records their local and hosted paths.

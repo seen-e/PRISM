@@ -2,3 +2,9 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Full-quality large media is hosted in GitHub release assets.
+/assets/video/source/bimanual-mating.mp4
+/assets/video/source/grasp-perturbation.mp4
+/assets/video/source/insertion-perturbation.mp4
+/assets/video/source/lighting-changes.mp4
