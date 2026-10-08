@@ -15,6 +15,6 @@ All webpage videos use 1× timing directly from the original recordings. Native 
 |Visual Distraction|插线-撒花.mp4|0.000–28.700|1×|2880×2160|
 |Lighting Changes|插线-手电.mp4|0.000–40.167|1×|2880×2160|
 
-PPS: PPS插线.mp4 (37.067 s), PPS对插.mp4 (34.467 s), PPS拧螺丝.mp4 (45 s), each at native 15 fps. Three native 960×624 panels are composed on a 1920×1360 canvas. Shorter videos hold their final frame, and all original score overlays remain attached to their respective robot frames. No scores are recomputed.
+PPS: PPS插线.mp4 (37.067 s), PPS对插.mp4 (34.467 s), PPS拧螺丝.mp4 (45 s), each at native 960×624 and 15 fps. The webpage presents three independent, complete original videos, each labeled Human VR Teleoperation · 1×. All original score overlays remain attached to their respective robot frames. No scores are recomputed. The earlier combined composition remains archived.
 
 The local-alignment camera network label is masked from source t=7.6 s. Other source pixels are neither cropped nor geometrically transformed.

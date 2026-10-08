@@ -16,8 +16,8 @@ The paper has not been uploaded to arXiv. The page labels it as a **research man
 - `assets/video/prism-demo.mp4`: approved 180-second, 1080p/30fps demonstration; original exported file copied without re-encoding (76,060,560 bytes).
 - `assets/video/source/*.mp4`: 1× videos rebuilt directly from the supplied original recordings at their native resolutions and frame rates; no 3-minute-film slices are used by the page.
 - `assets/source-clips.json`: original filenames, frame ranges, native dimensions, and 1× durations.
-- `assets/video/source/pps-teleoperation.mp4`: 45-second 1× PPS composition; three unscaled 960×624 panels retain their original score overlays and motion synchronization. Shorter sources hold their last frame.
-- `assets/video/source/pps-{drive-insertion,bimanual-mating,screw-tightening}.mp4`: untouched PPS original files.
+- `assets/video/source/pps-teleoperation.mp4`: archived 45-second PPS composition, no longer referenced by the homepage.
+- `assets/video/source/pps-{drive-insertion,bimanual-mating,screw-tightening}.mp4`: untouched PPS original files, displayed in three independent players with full trajectories and synchronized score overlays.
 - `assets/clips.json` and the old top-level MP4s: archived previous website media; no longer referenced by the homepage.
 - `assets/images/logo.webp`: the supplied PRISM logo, used in the title, navigation, footer, and browser favicon.
 - `assets/fonts/`: locally hosted Manrope fonts and their SIL Open Font License.
@@ -29,6 +29,8 @@ The paper has not been uploaded to arXiv. The page labels it as a **research man
 - `tools/split_videos.py`: archived previous 3-minute-film splitting workflow.
 
 There are no external JavaScript, CSS, font, analytics, or build dependencies. Videos load when requested rather than downloading during initial page load. All site paths are relative and work under `/PRISM/`.
+
+Main task videos and PPS videos each form a three-column row on desktop and stack vertically on mobile. PPS enlarged playback retains the Human VR Teleoperation label.
 
 ## Local preview
 

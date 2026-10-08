@@ -39,7 +39,7 @@
     expandedImage.hidden = true;
     expanded.hidden = false;
     document.getElementById('dialog-help').hidden = false;
-    document.getElementById('dialog-title').textContent = inlineSource.getAttribute('aria-label') + ' · PRISM Inference · 1×';
+    document.getElementById('dialog-title').textContent = inlineSource.getAttribute('aria-label') + ' · ' + (inlineSource.dataset.mode || 'PRISM Inference') + ' · 1×';
     expanded.poster = inlineSource.poster;
     expanded.src = inlineSource.querySelector('source').getAttribute('src');
     expanded.addEventListener('loadedmetadata', () => { expanded.currentTime = time; }, { once: true });
