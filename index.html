@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PRISM — Precision Forcing for Generalist VLA Policies</title>
+  <meta name="description" content="PRISM aligns VLA training with precision demand. Explore the paper, real-robot experiments, and Proprioceptive Precision Scoring demonstrations.">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta property="og:title" content="PRISM: Precision Forcing for Generalist Vision-Language-Action Policies">
+  <meta property="og:description" content="Learning when precision matters. A training strategy for fine manipulation, with unchanged policy inference.">
+  <meta property="og:type" content="website"><meta property="og:url" content="https://detimage123.github.io/PRISM/">
+  <meta property="og:image" content="https://detimage123.github.io/PRISM/assets/images/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://detimage123.github.io/PRISM/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="wordmark" href="#" aria-label="PRISM home"><img src="assets/images/logo.webp" width="48" height="34" alt=""><span>PRISM</span></a>
+    <nav aria-label="Main navigation"><a href="#experiments">Experiments</a><a href="#method">Method</a><a href="#results">Results</a><a href="#citation">Citation</a></nav>
+    <a class="nav-paper" href="assets/paper/PRISM.pdf" target="_blank" rel="noopener">Read paper <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="paper-title">
+    <p class="eyebrow"><span class="status-dot"></span> ROBOT LEARNING <span class="eyebrow-separator">/</span> PREPRINT 2026</p>
+    <div class="hero-word">PRISM<span class="hero-period">.</span></div>
+    <h1 id="paper-title">Precision Forcing for<br>Generalist Vision-Language-Action Policies</h1>
+    <p class="hero-summary">Teach generalist policies <em>when precision matters.</em><br> A training strategy for fine manipulation, with unchanged policy inference.</p>
+    <div class="authors" aria-label="Authors">
+      <span>Chenghao Yue<sup>2</sup></span><span>Peiyan Li<sup>2</sup></span><span>Hao Wang<sup>3</sup></span><span>Lei Lv<sup>4</sup></span><span>Jiahao Chen<sup>5</sup></span>
+      <span>Huaping Liu<sup>2,†</sup></span><span>Yu Luo<sup>1,†</sup></span><span>Yuanlong Zhang<sup>2,†</sup></span>
+    </div>
+    <div class="affiliations"><span><sup>1</sup> Seen-E Robotics</span><span><sup>2</sup> Tsinghua University</span><span><sup>3</sup> Dalian University of Technology</span><span><sup>4</sup> Tongji University</span><span><sup>5</sup> Peking University</span></div>
+    <p class="corresponding">† Corresponding authors</p>
+    <div class="hero-actions"><a class="button primary" href="assets/paper/PRISM.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Paper <span>PDF</span></a><a class="button" href="https://github.com/detimage123/PRISM" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>GitHub <span>↗</span></a><a class="button" href="#experiments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>Watch experiments <span>3 min</span></a></div>
+    <div class="task-strip">
+      <a href="#experiments" data-seek="3.5"><img src="assets/images/insertion.webp" width="800" height="450" alt="A robot aligns a connector with a motor drive socket"><span><b>01</b> Drive connector insertion <span aria-hidden="true">↗</span></span></a>
+      <a href="#experiments" data-seek="98.6333"><img src="assets/images/bimanual.webp" width="800" height="450" alt="Two robot arms align a pair of electrical connectors"><span><b>02</b> Bimanual connector mating <span aria-hidden="true">↗</span></span></a>
+      <a href="#experiments" data-seek="137.8667"><img src="assets/images/screw.webp" width="800" height="450" alt="A robot aligns an electric screwdriver with a screw"><span><b>03</b> Screw tightening <span aria-hidden="true">↗</span></span></a>
+    </div>
+    <div class="hero-foot"><span>Real-robot fine manipulation</span><span>Training-time precision awareness. Standard inference.</span></div>
+  </section>
+
+  <section class="intro-section wrap" aria-labelledby="idea-title">
+    <div><p class="eyebrow">THE IDEA</p><h2 id="idea-title">Not every moment<br>needs the same precision.</h2></div>
+    <div class="intro-copy"><p>Picking up a cable and inserting its connector demand very different levels of accuracy. Yet standard flow-matching objectives can give equally weighted action errors very different physical consequences.</p><p>PRISM addresses this <strong>Flow-Time Starvation</strong> by estimating precision demand from demonstrations, focusing supervision where it matters, and teaching the policy’s representations to recognize that demand.</p></div>
+  </section>
+
+  <section id="experiments" class="experiments dark-section" aria-labelledby="experiments-title">
+    <div class="wrap">
+      <div class="section-top"><div><p class="eyebrow">01 / EXPERIMENTS</p><h2 id="experiments-title">Precision in motion.</h2></div><p>Real robot. Real interactions.<br>Explore the full three-minute demonstration.</p></div>
+      <div class="video-frame"><video id="demo-video" controls playsinline preload="none" poster="assets/images/demo-poster.webp" aria-label="PRISM three-minute robot experiment demonstration"><source src="assets/video/prism-demo.mp4" type="video/mp4"><track kind="chapters" src="assets/chapters.vtt" srclang="en" label="Experiment chapters"><p>Your browser does not support embedded video. <a href="assets/video/prism-demo.mp4">Download the demonstration.</a></p></video></div>
+      <div class="player-meta"><span><span class="live-dot"></span><span id="chapter-label">Full demonstration</span></span><a href="assets/video/prism-demo.mp4" download>Download MP4 <span aria-hidden="true">↓</span></a></div>
+      <div class="chapters" aria-label="Jump to a video chapter">
+        <button data-seek="3.5" data-end="44.1333"><span>00:03</span>Connector insertion<small>Handover, close-up & local alignment</small></button>
+        <button data-seek="44.1333" data-end="98.6333"><span>00:44</span>Perturbation examples<small>Grasp, target, vision & lighting</small></button>
+        <button data-seek="98.6333" data-end="137.8667"><span>01:38</span>Bimanual mating<small>Three connector pairs</small></button>
+        <button data-seek="137.8667" data-end="155.2333"><span>02:17</span>Screw tightening<small>Pickup, adjustment & tool return</small></button>
+        <button data-seek="155.2333" data-end="177.7333"><span>02:35</span>Precision scoring<small>Human VR teleoperation</small></button>
+      </div>
+      <p class="video-note">Playback speeds are marked in the footage. Task demonstrations use PRISM inference; the PPS segment uses human VR teleoperation. Perturbation clips are qualitative examples, not a systematic robustness benchmark.</p>
+      <p id="video-status" class="sr-only" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="method" class="method wrap" aria-labelledby="method-title">
+    <div class="section-top"><div><p class="eyebrow">02 / METHOD</p><h2 id="method-title">Precision forcing.<br><span class="muted">Built into training.</span></h2></div><p>One shared precision signal.<br>Three complementary components.</p></div>
+    <div class="method-steps">
+      <article><span class="step-index">01 / PPS</span><h3>Score the demand.</h3><p><strong>Proprioceptive Precision Scoring</strong> estimates offline frame-level demand from joint motion, end-effector motion, and gripper engagement.</p></article>
+      <article><span class="step-index">02 / PSW</span><h3>Focus supervision.</h3><p><strong>Precision-Scaled Weighting</strong> combines context-dependent demand with flow-time emphasis and an SNR-based visibility gate.</p></article>
+      <article><span class="step-index">03 / CPR</span><h3>Learn the awareness.</h3><p><strong>Conditional Precision Regularization</strong> encourages the VLM condition representation to encode precision demand.</p></article>
+    </div>
+    <figure class="paper-figure"><button class="figure-zoom" data-image="assets/images/architecture.webp" data-title="PRISM architecture" aria-label="Enlarge the PRISM architecture figure"><img src="assets/images/architecture.webp" alt="PRISM architecture: offline PPS scores supervise CPR features and weight the flow-matching action loss through PSW" width="2056" height="1029" loading="lazy"><span>View full figure ↗</span></button><figcaption>The auxiliary labels and prediction head are used during training and discarded afterward. The model architecture and standard inference procedure remain unchanged.</figcaption></figure>
+    <details class="abstract"><summary>Read the abstract <span aria-hidden="true">+</span></summary><p>Coupling a pretrained vision-language model (VLM) with a diffusion or flow-matching action expert has become the mainstream vision-language-action (VLA) paradigm for embodied policies, yet they remain unreliable once a task demands precise manipulation, e.g., submillimeter cable insertion. We attribute this weakness to a training objective that averages flow-matching errors across contexts and flow times, allocating little supervision to the few decisive moments determining task success. Along the generative path, inference integrates a locally supervised velocity field, so equally penalized errors at different flow times can affect the executed action unequally. Consequently, precision-task performance deteriorates as physical tolerance tightens by orders of magnitude. We call this supervision imbalance across contexts and flow times <em>Flow-Time Starvation</em>. The remedy is to jointly align supervision allocation and representation learning with context-dependent precision demand, enabling the policy to recognize when greater precision is needed. We instantiate this precision-forcing strategy as Precision-aware Reweighting and Internalization for Skilled Manipulation (PRISM), which scores precision demand offline, strengthens flow supervision where errors are consequential and action signals are visible, and internalizes that demand in the VLM condition representation. Simulation and real-robot experiments show that PRISM preserves or improves general-task performance while raising mean end-to-end success from 38.3% to 86.7% across drive connector insertion, bimanual connector mating, and screw tightening, substantially extending the precision boundary of existing embodied policies without new sensors or observation modalities.</p></details>
+  </section>
+
+  <section id="results" class="results-section" aria-labelledby="results-title"><div class="wrap">
+    <div class="section-top"><div><p class="eyebrow">03 / EVALUATION</p><h2 id="results-title">General capability.<br>Finer control.</h2></div><div class="result-callout"><div><span>38.3</span><i aria-hidden="true">→</i><strong>86.7<small>%</small></strong></div><p>Mean end-to-end success on three real-robot tasks</p></div></div>
+    <div class="results-head"><h3>Multi-stage real-robot manipulation</h3><div class="legend"><span><i class="base-dot"></i>π₀.₅</span><span><i class="prism-dot"></i>π₀.₅ + PRISM</span></div></div>
+    <div class="bar-chart" role="img" aria-label="End-to-end success: drive connector insertion 35% baseline and 95% PRISM; bimanual mating 35% and 80%; screw tightening 45% and 85%.">
+      <div class="bar-group"><h4>Drive connector insertion</h4><div class="bar base" style="--value:35%"><span>35%</span></div><div class="bar prism" style="--value:95%"><span>95%</span></div></div>
+      <div class="bar-group"><h4>Bimanual connector mating</h4><div class="bar base" style="--value:35%"><span>35%</span></div><div class="bar prism" style="--value:80%"><span>80%</span></div></div>
+      <div class="bar-group"><h4>Screw tightening</h4><div class="bar base" style="--value:45%"><span>45%</span></div><div class="bar prism" style="--value:85%"><span>85%</span></div></div>
+    </div>
+    <p class="evaluation-note">20 trials per method per task; 500 demonstrations per task. The controlled comparison uses the same π₀.₅ backbone, observations, update budget, and inference schedule. Results reported in the paper.</p>
+    <details class="full-results"><summary>View task results, including DAgger <span aria-hidden="true">+</span></summary><div class="table-scroll"><table><caption>End-to-end task success (%)</caption><thead><tr><th scope="col">Method</th><th scope="col">Drive insertion</th><th scope="col">Bimanual mating</th><th scope="col">Screw tightening</th><th scope="col">Mean</th></tr></thead><tbody><tr><th scope="row">π₀.₅</th><td>35</td><td>35</td><td>45</td><td>38.3</td></tr><tr><th scope="row">π₀.₅ + DAgger</th><td>65</td><td>60</td><td>70</td><td>65.0</td></tr><tr class="highlight-row"><th scope="row">π₀.₅ + PRISM</th><td>95</td><td>80</td><td>85</td><td>86.7</td></tr></tbody></table></div><p>DAgger uses 100 additional corrective demonstrations per task.</p></details>
+    <div class="simulation"><div><p class="eyebrow">SIMULATION</p><h3>Precision without<br>giving up breadth.</h3></div><div class="sim-result"><span>RLBench-10 · π₀.₅</span><p>76% <i>→</i> <b>88%</b></p><small>Mean success across 10 tasks</small></div><div class="sim-result"><span>LIBERO · π₀.₅</span><p>96.9% <i>→</i> <b>97.5%</b></p><small>Average across four suites</small></div></div>
+  </div></section>
+
+  <section id="pps" class="pps-section wrap" aria-labelledby="pps-title">
+    <div class="pps-copy"><p class="eyebrow">04 / INSIDE THE DEMONSTRATIONS</p><h2 id="pps-title">A closer look<br>at precision demand.</h2><p>PPS is computed offline from demonstrated trajectories. Watch the three complete examples together, with the original score overlays synchronized to robot motion.</p><div class="teleop-tag"><span class="status-dot"></span> Human VR teleoperation <b>2×</b></div><p class="small-note">A trajectory-derived behavioral proxy, not a direct measurement of physical tolerance.</p></div>
+    <div class="pps-video"><video id="pps-video" controls playsinline preload="none" poster="assets/images/pps.webp" aria-label="Full PPS trajectories from human VR teleoperation at 2 times speed"><source src="assets/video/pps-teleoperation.mp4" type="video/mp4"><p><a href="assets/video/pps-teleoperation.mp4">Download PPS video</a></p></video><p>Drive insertion · Bimanual mating · Screw tightening</p><p><a class="text-link" href="assets/video/pps-teleoperation.mp4" download>Download PPS video ↓</a></p></div>
+  </section>
+
+  <section id="citation" class="citation-section"><div class="wrap citation-wrap"><div><p class="eyebrow">05 / REFERENCE</p><h2>Cite this work.</h2><p>If PRISM informs your research,<br>please consider citing the preprint.</p><a class="text-link" href="assets/paper/prism.bib" download>Download BibTeX ↓</a></div><div class="citation-code"><div><span>BIBTEX</span><button id="copy-citation" type="button">Copy citation <span aria-hidden="true">⧉</span></button></div><pre id="bibtex">@misc{yue2026prism,
+  title = {PRISM: Precision Forcing for Generalist
+           Vision-Language-Action Policies},
+  author = {Chenghao Yue and Peiyan Li and Hao Wang
+            and Lei Lv and Jiahao Chen and Huaping Liu
+            and Yu Luo and Yuanlong Zhang},
+  year = {2026},
+  howpublished = {Preprint},
+  url = {https://detimage123.github.io/PRISM/}
+}</pre><span class="sr-only" id="copy-status" aria-live="polite"></span></div></div></section>
+</main>
+<footer class="wrap"><a class="wordmark" href="#">PRISM<span class="brand-dot">.</span></a><p>Precision-aware learning for fine manipulation.</p><a href="mailto:yuech26@mails.tsinghua.edu.cn">Contact ↗</a></footer>
+<dialog id="figure-dialog" aria-label="Enlarged paper figure"><div class="dialog-head"><h2 id="figure-title">Paper figure</h2><button id="close-figure" aria-label="Close enlarged figure">✕</button></div><img id="figure-image" alt="Enlarged PRISM architecture"></dialog>
+</body>
+</html>
