@@ -31,7 +31,8 @@ class Page(HTMLParser):
 
 page = Page()
 page.feed((ROOT / "index.html").read_text(encoding="utf-8"))
-page.references.extend(re.findall(r"url\(['\"]?([^)'\"]+)", (ROOT / "styles.css").read_text(encoding="utf-8")))
+for stylesheet in ROOT.glob('*.css'):
+    page.references.extend(re.findall(r"url\(['\"]?([^)'\"]+)", stylesheet.read_text(encoding="utf-8")))
 assets = set()
 for value in page.references:
     url = urlsplit(value)

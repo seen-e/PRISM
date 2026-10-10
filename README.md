@@ -10,6 +10,7 @@ The paper has not been uploaded to arXiv. The page labels it as a **research man
 
 - `index.html`: paper title, authors, affiliations, method, results, and citation.
 - `styles.css`: responsive desktop/mobile design.
+- `research.css`: SEEN·E / CSDW research-page theme, with locally hosted Prompt fonts, neutral backgrounds, red accents, and the original PRISM blue wordmark and logo.
 - `app.js`: independent video playback, enlarged video/image views, citation copying.
 - `assets/paper/PRISM.pdf`: 21-page PDF compiled from the supplied `PRISM_arXiv_preprint_20261008.zip` without changing its LaTeX source.
 - `assets/paper/prism.bib`: citation for the current unpublished manuscript.
@@ -56,7 +57,9 @@ Edit HTML content directly, replace figure/media assets using the same names, an
 
 Paper results follow the provided manuscript, including the trial count and the additional demonstrations used for DAgger. The disturbance clips are qualitative examples. PPS is described as a trajectory-derived proxy, not a physical tolerance measurement. There is no arXiv identifier, acceptance badge, or code-release claim.
 
-The visual design follows the provided logo's navy, ice-blue, cyan, and violet palette. Research-page references informed the structure, without copying their source code or media: [Mobile ALOHA](https://mobile-aloha.github.io/), [OpenVLA](https://openvla.github.io/), [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/), and [RDT-1B](https://rdt-robotics.github.io/rdt-robotics/).
+The current visual template follows the company's [CSDW project page](https://seen-e.github.io/CSDW/): Prompt typography, black/gray text, pale gray sections, restrained red accents, fine dividers, and squared buttons. PRISM's logo artwork and blue title gradient remain unchanged. Main tasks and the three independent PPS recordings retain their existing desktop rows and responsive mobile layouts.
+
+The intended destination is `https://seen-e.github.io/PRISM/`. Repository transfer is pending organization permission; on 2026-10-10 GitHub rejected transfer because detimage123 cannot create public repositories on seen-e. Keep canonical, repository, citation, and release URLs at their working locations until transfer succeeds. After transfer, update those URLs to seen-e and verify Pages plus release-video playback.
 
 ## Checks
 

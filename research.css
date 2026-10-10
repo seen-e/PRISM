@@ -1,0 +1,135 @@
+/* SEEN·E research-page styling, following the CSDW project page.
+   PRISM logo artwork and blue title gradient remain unchanged. */
+@font-face{font-family:Prompt;src:url('assets/fonts/Prompt-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Prompt;src:url('assets/fonts/Prompt-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Prompt;src:url('assets/fonts/Prompt-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Prompt;src:url('assets/fonts/Prompt-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{--ink:#000;--muted:#666;--line:#e5e5e5;--accent:#af2c29;--blue:#af2c29;--navy:#222;--font:'Prompt',Arial,sans-serif}
+body{font-size:16px;line-height:1.8;color:var(--ink)}
+.wrap{width:min(1096px,calc(100% - 64px))}
+.section{padding-block:72px}
+.site-header{height:86px;border-bottom-color:var(--line);background:#fffffff5;backdrop-filter:blur(12px)}
+.nav-wrap{max-width:1360px;padding-inline:32px}
+.wordmark{color:#153964;font-family:Manrope,Arial,sans-serif}
+.hero-brand{font-family:Manrope,Arial,sans-serif}
+.research-lockup{display:flex;align-items:center;gap:18px}
+.research-label{border-left:1px solid var(--line);padding-left:18px;font-size:10px;font-weight:500;line-height:1.6;letter-spacing:.13em;color:#666}
+nav{font-size:13px;gap:24px;font-weight:500;color:#555}
+nav a:hover,nav a.active{color:var(--accent)}
+.nav-paper{font-size:13px;font-weight:500;border-bottom:1px solid #222;padding-block:3px;color:#222;gap:10px}
+.hero{background:#fff;overflow:visible}
+.hero-glow{display:none}
+.hero-inner{padding-top:55px;padding-bottom:48px}
+.hero-brand{margin-bottom:22px}
+h1{color:#000;font-size:clamp(35px,4vw,50px);line-height:1.25;font-weight:600;letter-spacing:-.04em}
+.authors{font-size:15px;font-weight:400;color:#333;line-height:2.05;gap:5px 22px;margin-top:26px}
+.authors sup,.affiliations sup{color:#666}
+.affiliations{color:#666;font-size:12px;gap:5px 20px;margin-top:14px}
+.hero-actions{margin-top:25px;gap:10px;flex-wrap:wrap}
+.button,.hero-actions .button{font-size:13px;line-height:1.7;font-weight:500;border-radius:4px;padding:10px 19px;box-shadow:none;gap:10px;border-color:#dedede;color:#333}
+.button.primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:none}
+.button:hover{border-color:#aaa;background:#fafafa;box-shadow:none}
+.button.primary:hover{background:#5b0200;border-color:#5b0200}
+.manuscript-note{color:#666;font-size:11px;letter-spacing:0;margin-top:18px}
+.experiment-index{top:86px;background:#fff;border-color:var(--line);backdrop-filter:none}
+.experiment-index .wrap{gap:30px;min-height:52px}
+.experiment-index .wrap>span{color:#777;font-weight:500;letter-spacing:.13em}
+.experiment-index a{color:#555;font-size:12px;font-weight:500;padding:15px 0}
+.experiment-index a b{color:#888;font-weight:400}
+.experiment-index a:hover,.experiment-index a.active{color:var(--accent);border-color:var(--accent)}
+html{scroll-padding-top:164px}
+.eyebrow{font-size:11px;letter-spacing:.13em;color:#666;font-weight:500;margin-bottom:16px}
+h2{font-size:clamp(28px,3.25vw,39px);font-weight:500;letter-spacing:-.025em;line-height:1.25}
+h3{color:#000;font-weight:500;letter-spacing:-.025em}
+.section-head{margin-bottom:28px}
+.video-grid{gap:32px}
+.clip-screen{border-radius:5px;box-shadow:none;border:1px solid var(--line);background:#080808}
+.clip-screen video{background:#080808}
+.play-cover{background:linear-gradient(0deg,#0008,transparent 48%)}
+.play-disc{background:#fff;color:#222;box-shadow:0 2px 15px #0002}
+.play-caption{color:#fff}
+.play-caption b{background:#0008;border-color:#fff4;font-weight:400;border-radius:3px}
+.clip-caption{padding-top:17px}
+.clip-kicker{color:#666;font-weight:500;letter-spacing:.09em;font-size:9px}
+.speed{color:#666;font-weight:500;font-size:11px}
+.clip-caption h3,.main-grid .clip-caption h3,.pps-grid .clip-caption h3{color:#000;font-size:18px;font-weight:500;line-height:1.45;min-height:2.9em}
+.two-grid .clip-caption h3{font-size:21px;min-height:0}
+.clip-actions{margin-top:14px;padding-top:12px;color:#666;font-size:11px;border-color:var(--line)}
+.clip-actions button{color:#444;font-size:11px}
+.clip-actions button:hover,.clip-actions a:hover{color:var(--accent)}
+.tinted-section{background:#f7f7f7;border-color:var(--line)}
+.pps-grid .clip-kicker{color:#666;letter-spacing:.07em}
+.section-lined{border-color:var(--line)}
+.method-section{background:#f7f7f7;border-color:var(--line)}
+.method-lead{gap:60px}
+.method-lead>p{font-size:15px;color:#555;line-height:1.8}
+.method-steps{gap:35px}
+.method-steps article{border-top-color:#ddd;gap:16px}
+.step-symbol{color:#999;font-size:23px;font-weight:400;padding-top:0}
+.method-acronym{color:var(--accent);font-weight:500;font-size:11px}
+.method-steps h3{font-size:19px}
+.method-steps p{font-size:14px;line-height:1.8;color:#555}
+.paper-figure{border-color:var(--line);border-radius:4px;padding:22px}
+.figure-zoom>span{color:#666;font-size:11px}
+.paper-figure figcaption{font-size:12px;color:#666;line-height:1.75}
+details{border-color:var(--line)}
+summary{font-size:14px;font-weight:500}
+summary>span{color:#777}
+.abstract p{font-size:14px;color:#555;line-height:1.85}
+.results-summary{background:#f7f7f7;border-color:var(--line);border-radius:4px}
+.results-summary>span,.results-summary p{color:#555;font-size:13px}
+.results-summary>div>span{color:#777}
+.results-summary i{color:#999}
+.results-summary strong{color:#245ba8}
+.results-head h3{font-size:21px}
+.legend{font-size:12px;color:#555}
+.bar-group h4{font-size:13px;color:#333}
+.axis{border-color:#ddd;color:#888}
+.footnote{font-size:12px;color:#666;line-height:1.8}
+th,td{border-color:var(--line)}
+thead th{color:#555}
+.highlight-row{background:#f2f5f9;color:#245ba8}
+.simulation{border-color:var(--line)}
+.sim-result{border-color:#ddd}
+.sim-result>span,.sim-result small{color:#666;font-size:12px}
+.citation-section{background:#fff;border-color:var(--line)}
+.citation-wrap{grid-template-columns:1fr;gap:25px}
+.citation-wrap>div>p:not(.eyebrow){display:none}
+.citation-wrap h2{margin-bottom:16px}
+.subtle-link{color:#444;font-size:12px;border-color:#ccc}
+.citation-code{background:#f5f5f5;border:0;border-radius:4px}
+.citation-code>div{border-color:#ddd}
+.citation-code>div>span{color:#666}
+.citation-code button{color:var(--accent);font-size:12px}
+pre{font-size:12px;line-height:1.7;color:#444;padding:22px}
+footer{padding-block:28px}
+footer>p,footer>a:last-child{font-size:12px;color:#666}
+dialog{border-color:#ddd;border-radius:5px;box-shadow:0 30px 100px #0005}
+dialog::backdrop{background:#000c;backdrop-filter:blur(6px)}
+.dialog-head h2{font-weight:500;color:#111}
+.dialog-head button{background:#f5f5f5;color:#666}
+#dialog-help{color:#666;font-size:11px}
+button:focus-visible,a:focus-visible,summary:focus-visible,video:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+@media(max-width:1000px){nav{gap:18px}.research-label{display:none}.research-lockup{gap:0}}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 44px)}
+ .site-header{height:76px}.nav-wrap{padding-inline:20px;gap:12px}
+ nav{font-size:11px;gap:15px}.nav-paper{font-size:12px}
+ .hero-inner{padding-top:34px;padding-bottom:30px}
+ h1{font-size:clamp(31px,5.5vw,42px)}
+ .authors{font-size:13px;line-height:2;gap:5px 15px;margin-top:22px}
+ .affiliations{font-size:11px;gap:3px 12px}
+ .hero-actions .button{font-size:12px;padding:9px 13px}
+ .experiment-index{top:76px}.experiment-index .wrap{gap:23px;padding-inline:22px}
+ .experiment-index a{font-size:11px;padding-block:14px}
+ html{scroll-padding-top:146px}
+ .section{padding-block:50px}.eyebrow{font-size:10px}
+ .clip-caption h3,.main-grid .clip-caption h3,.pps-grid .clip-caption h3{font-size:20px;min-height:0}
+ .video-grid{gap:30px}.method-lead{gap:25px}
+ .method-lead>p,.method-steps p{font-size:14px}
+ .paper-figure{padding:14px}.paper-figure figcaption{font-size:11px}
+ .results-summary{padding:22px}.results-summary>span,.results-summary p{font-size:12px}
+ .citation-wrap{gap:20px}pre{font-size:11px;padding:16px}
+ .simulation{gap:22px}.sim-result>span,.sim-result small{font-size:11px}
+ footer>p,footer>a:last-child{font-size:11px}
+}
