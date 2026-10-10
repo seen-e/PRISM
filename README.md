@@ -1,15 +1,16 @@
 # PRISM
 
-Code-only release of **PRISM: Precision-aware Reweighting and Internalization
+Official release of **PRISM: Precision-aware Reweighting and Internalization
 for Skilled Manipulation**.
 
 Project page: <https://seen-e.github.io/PRISM/>
 
-This repository is self-contained at the source-code level. It vendors the
-exact π0.5/OpenPI working tree used by the project and a PRISM-integrated
-StarVLA tree. Users do **not** need to clone either upstream repository or
-apply patches. Datasets, pretrained weights, experiment outputs, benchmarks,
-and paper assets are intentionally excluded.
+This repository contains the project website and a self-contained source-code
+release. It vendors the exact π0.5/OpenPI working tree used by the project and
+a PRISM-integrated StarVLA tree. Users do **not** need to clone either upstream
+repository or apply patches. Datasets, pretrained weights, experiment outputs,
+and benchmarks are intentionally excluded. Website and manuscript assets are
+under `assets/`.
 
 ## Repository layout
 
@@ -22,6 +23,7 @@ and paper assets are intentionally excluded.
 - `configs/`: public reference configurations.
 - `scripts/`: installation, training, and serving entry points.
 - `tests/`: numerical and data-contract tests.
+- `index.html` and `assets/`: project website and manuscript resources.
 
 ## 1. Generate PPS targets
 
