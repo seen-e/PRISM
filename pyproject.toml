@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-vla"
+version = "0.1.0"
+description = "PRISM training components for precision-aware vision-language-action policies"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+pi05 = ["jax>=0.4"]
+starvla = ["torch>=2.1"]
+data = ["pyarrow>=14"]
+test = ["pytest>=8", "torch>=2.1", "jax>=0.4"]
+
+[project.scripts]
+prism-compute-pps = "prism.lerobot:main"
+
+[tool.setuptools.packages.find]
+include = ["prism*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

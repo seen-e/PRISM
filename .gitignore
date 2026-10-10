@@ -1,10 +1,22 @@
 __pycache__/
-*.pyc
-.DS_Store
-Thumbs.db
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
 
-# Full-quality large media is hosted in GitHub release assets.
-/assets/video/source/bimanual-mating.mp4
-/assets/video/source/grasp-perturbation.mp4
-/assets/video/source/insertion-perturbation.mp4
-/assets/video/source/lighting-changes.mp4
+# Keep the public repository code-only.
+data/
+datasets/
+checkpoints/
+outputs/
+logs/
+wandb/
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.parquet
+
