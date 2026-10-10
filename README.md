@@ -2,7 +2,7 @@
 
 Project website for **PRISM: Precision Forcing for Generalist Vision-Language-Action Policies**.
 
-Live GitHub Pages URL: **https://detimage123.github.io/PRISM/**
+Live GitHub Pages URL: **https://seen-e.github.io/PRISM/**
 
 The paper has not been uploaded to arXiv. The page labels it as a **research manuscript** and uses an `@unpublished` BibTeX entry without an arXiv identifier.
 
@@ -45,9 +45,9 @@ Open http://127.0.0.1:8765/. Use this server for testing video seeking; a server
 
 ## GitHub Pages
 
-Upload these files to the `main` branch of `detimage123/PRISM`, keeping `index.html` at the repository root and including `.nojekyll`.
+Upload these files to the `main` branch of `seen-e/PRISM`, keeping `index.html` at the repository root and including `.nojekyll`.
 
-In **Settings → Pages**, select **Deploy from a branch**, then **main / (root)**. GitHub serves the site at https://detimage123.github.io/PRISM/ after deployment finishes.
+In **Settings → Pages**, select **Deploy from a branch**, then **main / (root)**. GitHub serves the site at https://seen-e.github.io/PRISM/ after deployment finishes.
 
 Current media uses browser-compatible H.264 with fast-start MP4 layout. A 1× label means the timing of the supplied original file; no additional speed-up or slow-down is applied. Audio is omitted, and the previously identified network label is masked in the local-alignment video. Full recordings are retained; the 84-second perturbation recording is split at 30 seconds into two consecutive videos without omitting frames. The original three-minute submission film remains archived, unchanged.
 
@@ -59,7 +59,7 @@ Paper results follow the provided manuscript, including the trial count and the 
 
 The current visual template follows the company's [CSDW project page](https://seen-e.github.io/CSDW/): Prompt typography, black/gray text, pale gray sections, restrained red accents, fine dividers, and squared buttons. PRISM's logo artwork and blue title gradient remain unchanged. Main tasks and the three independent PPS recordings retain their existing desktop rows and responsive mobile layouts.
 
-The intended destination is `https://seen-e.github.io/PRISM/`. Repository transfer is pending organization permission; on 2026-10-10 GitHub rejected transfer because detimage123 cannot create public repositories on seen-e. Keep canonical, repository, citation, and release URLs at their working locations until transfer succeeds. After transfer, update those URLs to seen-e and verify Pages plus release-video playback.
+The repository and its release media were transferred to `seen-e/PRISM` on 2026-10-10. The project is published at `https://seen-e.github.io/PRISM/`. Canonical, repository, citation, and release-media URLs use the organization destination.
 
 ## Checks
 

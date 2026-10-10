@@ -35,7 +35,7 @@
     "privacy_masks": [],
     "frames": 1351,
     "duration": 45.03333333333333,
-    "video": "https://github.com/detimage123/PRISM/releases/download/website-media-20261008/bimanual-mating-hq.mp4",
+    "video": "https://github.com/seen-e/PRISM/releases/download/website-media-20261008/bimanual-mating-hq.mp4",
     "poster": "assets/images/clips/bimanual-mating-source.webp",
     "bytes": 120277934,
     "local_video": "assets/video/source/bimanual-mating.mp4"
@@ -124,7 +124,7 @@
     "privacy_masks": [],
     "frames": 900,
     "duration": 30.0,
-    "video": "https://github.com/detimage123/PRISM/releases/download/website-media-20261008/grasp-perturbation-hq.mp4",
+    "video": "https://github.com/seen-e/PRISM/releases/download/website-media-20261008/grasp-perturbation-hq.mp4",
     "poster": "assets/images/clips/grasp-perturbation-source.webp",
     "bytes": 165135599,
     "local_video": "assets/video/source/grasp-perturbation.mp4"
@@ -145,7 +145,7 @@
     "privacy_masks": [],
     "frames": 1622,
     "duration": 54.06666666666667,
-    "video": "https://github.com/detimage123/PRISM/releases/download/website-media-20261008/insertion-perturbation-hq.mp4",
+    "video": "https://github.com/seen-e/PRISM/releases/download/website-media-20261008/insertion-perturbation-hq.mp4",
     "poster": "assets/images/clips/insertion-perturbation-source.webp",
     "bytes": 274687757,
     "local_video": "assets/video/source/insertion-perturbation.mp4"
@@ -206,7 +206,7 @@
     "privacy_masks": [],
     "frames": 1205,
     "duration": 40.166666666666664,
-    "video": "https://github.com/detimage123/PRISM/releases/download/website-media-20261008/lighting-changes-hq.mp4",
+    "video": "https://github.com/seen-e/PRISM/releases/download/website-media-20261008/lighting-changes-hq.mp4",
     "poster": "assets/images/clips/lighting-changes-source.webp",
     "bytes": 155552473,
     "local_video": "assets/video/source/lighting-changes.mp4"
