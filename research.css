@@ -12,8 +12,11 @@ body{font-size:16px;line-height:1.8;color:var(--ink)}
 .nav-wrap{max-width:1360px;padding-inline:32px}
 .wordmark{color:#153964;font-family:Manrope,Arial,sans-serif}
 .hero-brand{font-family:Manrope,Arial,sans-serif}
-.research-lockup{display:flex;align-items:center;gap:18px}
-.research-label{border-left:1px solid var(--line);padding-left:18px;font-size:10px;font-weight:500;line-height:1.6;letter-spacing:.13em;color:#666}
+.research-lockup{display:flex;align-items:center;gap:18px;flex-shrink:0;line-height:1.2}
+.seene-logo{width:144px;height:auto;display:block}
+.research-label{display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line);padding-left:18px}
+.research-label small{font-size:10px;font-weight:400;letter-spacing:.15em;color:#666}
+.research-label strong{font-size:19px;font-weight:500;letter-spacing:.02em;color:#000}
 nav{font-size:13px;gap:24px;font-weight:500;color:#555}
 nav a:hover,nav a.active{color:var(--accent)}
 .nav-paper{font-size:13px;font-weight:500;border-bottom:1px solid #222;padding-block:3px;color:#222;gap:10px}
@@ -110,19 +113,22 @@ dialog::backdrop{background:#000c;backdrop-filter:blur(6px)}
 .dialog-head button{background:#f5f5f5;color:#666}
 #dialog-help{color:#666;font-size:11px}
 button:focus-visible,a:focus-visible,summary:focus-visible,video:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
-@media(max-width:1000px){nav{gap:18px}.research-label{display:none}.research-lockup{gap:0}}
+@media(max-width:1000px){nav{gap:18px}}
 @media(max-width:760px){
  .wrap{width:calc(100% - 44px)}
- .site-header{height:76px}.nav-wrap{padding-inline:20px;gap:12px}
+ .site-header{height:108px}.nav-wrap{padding:10px 20px;gap:8px 12px;flex-wrap:wrap}
+ .seene-logo{width:130px}.research-lockup{gap:14px}
+ .research-label{padding-left:14px;gap:5px}.research-label small{font-size:9px}.research-label strong{font-size:17px}
+ .site-header nav{order:3;width:100%;justify-content:center}
  nav{font-size:11px;gap:15px}.nav-paper{font-size:12px}
  .hero-inner{padding-top:34px;padding-bottom:30px}
  h1{font-size:clamp(31px,5.5vw,42px)}
  .authors{font-size:13px;line-height:2;gap:5px 15px;margin-top:22px}
  .affiliations{font-size:11px;gap:3px 12px}
  .hero-actions .button{font-size:12px;padding:9px 13px}
- .experiment-index{top:76px}.experiment-index .wrap{gap:23px;padding-inline:22px}
+ .experiment-index{top:108px}.experiment-index .wrap{gap:23px;padding-inline:22px}
  .experiment-index a{font-size:11px;padding-block:14px}
- html{scroll-padding-top:146px}
+ html{scroll-padding-top:178px}
  .section{padding-block:50px}.eyebrow{font-size:10px}
  .clip-caption h3,.main-grid .clip-caption h3,.pps-grid .clip-caption h3{font-size:20px;min-height:0}
  .video-grid{gap:30px}.method-lead{gap:25px}
